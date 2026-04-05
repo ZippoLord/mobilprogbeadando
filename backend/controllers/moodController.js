@@ -33,13 +33,14 @@ exports.createMoodEntry = async (req, res) => {
     console.error("Hiba a mood entry létrehozásakor:", error);
     res.status(500).json({ message: "Szerver hiba!" });
   }
+};
 
-  getAllMoodEntries = async (req, res) => {
-    try {
-      const entries = await MoodEntry.find().sort({ date: -1 });
-      res.json(entries);
-    } catch (error) {
-      console.error("Hiba a mood entry lekérésekor:", error);
-      res.status(500).json({ message: "Szerver hiba!" });
-    }   }
+exports.getAllMoodEntries = async (req, res) => {
+  try {
+    const entries = await MoodEntry.find().sort({ date: -1 });
+    res.json(entries);
+  } catch (error) {
+    console.error("Hiba a mood entry lekérésekor:", error);
+    res.status(500).json({ message: "Szerver hiba!" });
+  }
 };
