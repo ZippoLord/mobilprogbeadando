@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="brand_primary">#0891B2</color>
+    <color name="brand_primary_dark">#0E7490</color>
+    <color name="brand_secondary">#2563EB</color>
+    <color name="app_bg">#EAF4FF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="stroke_soft">#D6E4F0</color>
+    <color name="nav_indicator">#D7F0FA</color>
 </resources>

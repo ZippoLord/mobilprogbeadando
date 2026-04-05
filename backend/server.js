@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
     res.send('Server is running!');
 });
 
-//routes
 app.use('/api', moodRoutes);
 app.use('/api', weatherRoutes);
 

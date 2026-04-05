@@ -4,7 +4,7 @@ exports.getWeatherByCity = async (req, res) => {
   try {
     const city = req.params.city;
     console.log("BACKEND CITY:", req.params.city);
-    const weather = await getWeatherByCity(city);// Debug log
+    const weather = await getWeatherByCity(city);
     res.json(weather);
   } catch (error) {
     console.error('Weather API hiba:', error.response?.data || error.message);

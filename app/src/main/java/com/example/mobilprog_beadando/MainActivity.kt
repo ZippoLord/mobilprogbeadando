@@ -1,16 +1,21 @@
 package com.example.mobilprog_beadando
 
+import android.content.Context
 import android.os.Bundle
-import android.webkit.WebView.FindListener
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.findNavController
+import com.example.mobilprog_beadando.data.utils.AppSettings
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.navigation.ui.setupWithNavController
 
 class MainActivity : AppCompatActivity() {
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(AppSettings.applyLocale(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -9,4 +9,12 @@ class MoodRepository {
     suspend fun sendMoodToServer(entry: MoodEntry) {
         RetrofitClient.api.sendMood(entry)
     }
+
+    suspend fun getAllMood(): List<MoodEntry> {
+        return RetrofitClient.api.getAllMood()
+    }
+
+    suspend fun deleteMood(id: String) {
+        RetrofitClient.api.deleteMood(id)
+    }
 }

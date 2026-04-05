@@ -1,10 +1,10 @@
 import com.example.mobilprog_beadando.data.model.MoodEntry
 import com.example.mobilprog_beadando.data.model.WeatherResponse
+import retrofit2.http.DELETE
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface ApiService {
     @GET("api/weather/{city}") suspend fun getWeather( @Path("city") city: String ): WeatherResponse
@@ -14,5 +14,8 @@ interface ApiService {
 
     @GET("api/mood/getallmoods")
     suspend fun getAllMood(): List<MoodEntry>
+
+    @DELETE("api/mood/{id}")
+    suspend fun deleteMood(@Path("id") id: String)
 
 }

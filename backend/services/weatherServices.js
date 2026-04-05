@@ -6,7 +6,7 @@ async function getWeatherByCity(cityName) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
 
   const response = await axios.get(url);
-  console.log('Weather API response:', response.data); // Debug log
+  console.log('Weather API response:', response.data);
 
   return {
     temperature: response.data.main.temp,
